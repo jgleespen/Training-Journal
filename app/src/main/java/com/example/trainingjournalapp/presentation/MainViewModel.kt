@@ -1,11 +1,8 @@
-package com.example.trainingjournalapp.presentation.navhost
+package com.example.trainingjournalapp.presentation
 
 import androidx.lifecycle.viewModelScope
 import com.example.mvvcmbase.viewmodel.BaseViewModel
-import com.example.trainingjournalapp.domain.usecases.authentication.GetUserUseCase
-import com.example.trainingjournalapp.presentation.navhost.MainViewState.*
-import com.example.trainingjournalapp.util.doOnError
-import com.example.trainingjournalapp.util.doOnSuccess
+import com.example.trainingjournalapp.presentation.MainViewState.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

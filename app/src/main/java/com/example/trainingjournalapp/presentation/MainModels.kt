@@ -1,4 +1,4 @@
-package com.example.trainingjournalapp.presentation.navhost
+package com.example.trainingjournalapp.presentation
 
 import com.example.mvvcmbase.models.Destination
 import com.example.mvvcmbase.models.ViewEvent

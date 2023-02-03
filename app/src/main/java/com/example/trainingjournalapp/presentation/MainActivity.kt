@@ -1,17 +1,15 @@
-package com.example.trainingjournalapp.presentation.navhost
+package com.example.trainingjournalapp.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.navigation.NavHostController
 import com.example.mvvcmbase.viewmodel.Router
-import com.example.trainingjournalapp.presentation.navhost.MainDestination.*
+import com.example.trainingjournalapp.presentation.MainDestination.*
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.trainingjournalapp.presentation.theme.TrainingJournalAppTheme
-import com.example.trainingjournalapp.util.Screen
 import com.example.trainingjournalapp.util.Screen.*
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,7 +24,7 @@ class MainActivity : ComponentActivity(), Router<MainDestination> {
 
     private lateinit var navController: NavHostController
 
-    private lateinit var viewModel:MainViewModel
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
 

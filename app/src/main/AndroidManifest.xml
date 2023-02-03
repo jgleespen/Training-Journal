@@ -9,7 +9,7 @@
         android:theme="@style/Theme.TrainingJournalApp"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.navhost.MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.TrainingJournalApp">
             <intent-filter>
