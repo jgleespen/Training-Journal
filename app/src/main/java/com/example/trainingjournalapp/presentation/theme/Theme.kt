@@ -32,25 +32,25 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = LightPrimary40,
-    secondary = LightSecondary40,
-    tertiary = LightTertiary40,
-    error = LightError40,
+    primary = LightPrimary,
+    secondary = LightSecondary,
+    tertiary = LightTertiary,
+    error = LightError,
 
-    onPrimary = LightOnPrimary100,
-    onSecondary = LightOnSecondary100,
-    onTertiary = LightOnTertiary100,
-    onError = LightError40,
+    onPrimary = LightOnPrimary,
+    onSecondary = LightOnSecondary,
+    onTertiary = LightOnTertiary,
+    onError = LightError,
 
-    primaryContainer = LightPrimaryContainer90,
-    secondaryContainer = LightSecondaryContainer90,
-    tertiaryContainer = LightTertiaryContainer90,
-    errorContainer = LightErrorContainer90,
+    primaryContainer = LightPrimaryContainer,
+    secondaryContainer = LightSecondaryContainer,
+    tertiaryContainer = LightTertiaryContainer,
+    errorContainer = LightErrorContainer,
 
-    onPrimaryContainer = LightOnPrimaryContainer10,
-    onSecondaryContainer = LightOnSecondaryContainer10,
-    onTertiaryContainer = LightOnTertiaryContainer10,
-    onErrorContainer = LightOnErrorContainer10,
+    onPrimaryContainer = LightOnPrimaryContainer,
+    onSecondaryContainer = LightOnSecondaryContainer,
+    onTertiaryContainer = LightOnTertiaryContainer,
+    onErrorContainer = LightOnErrorContainer,
 
     background = LightBackground,
     surface = LightSurface,
