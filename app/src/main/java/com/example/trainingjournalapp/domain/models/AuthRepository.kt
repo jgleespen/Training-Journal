@@ -5,7 +5,7 @@ import com.example.trainingjournalapp.util.Response
 
 interface AuthRepository {
     suspend fun getCurrentUser(): Response<User>
-    suspend fun getCurrentUserId(): Response<String>
+    suspend fun getCurrentUserUid(): Response<String>
 
     suspend fun registerUserWithUsername(
         email: String,
