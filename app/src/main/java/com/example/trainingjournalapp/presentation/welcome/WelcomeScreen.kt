@@ -1,8 +1,8 @@
 package com.example.trainingjournalapp.presentation.welcome
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -15,6 +15,7 @@ import com.example.mvvcmbase.viewmodel.EventReceiver
 import com.example.trainingjournalapp.presentation.common.AppScaffold
 import com.example.trainingjournalapp.presentation.common.ScreenBackground
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import com.example.trainingjournalapp.presentation.theme.spacing
 
 /** [ViewDelegate] pattern for composables, essentially the
  * delegate picks the view to display and then passes a reference
@@ -22,11 +23,13 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 @OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 fun WelcomeViewDelegate(viewModel: WelcomeViewModel) {
-    ScreenBackground {
-        AppScaffold(
-            topBar = { /*TODO*/ },
-            bottomBar = { /*TODO*/ },
-        ) {
+    AppScaffold(
+        bottomBar = {
+            BottomAppBar() {
+            }
+        },
+    ) {
+        ScreenBackground(scrollingEnabled = false) {
             viewModel.viewState.collectAsState().value?.apply {
                 WelcomeScreen(eventReceiver = viewModel)
             }
@@ -37,13 +40,12 @@ fun WelcomeViewDelegate(viewModel: WelcomeViewModel) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WelcomeScreen(
-    eventReceiver: EventReceiver<WelcomeScreenViewEvent>
+    eventReceiver: EventReceiver<WelcomeScreenViewEvent>,
+    shape: RoundedCornerShape = RoundedCornerShape(spacing.medium)
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(16.dp))
-            .fillMaxWidth()
-            .fillMaxHeight(0.8f)
+            .fillMaxSize()
     ) {
     }
 }
