@@ -31,7 +31,7 @@ fun WelcomeViewDelegate(viewModel: WelcomeViewModel) {
     ) {
         ScreenBackground(scrollingEnabled = false) {
             viewModel.viewState.collectAsState().value?.apply {
-                WelcomeScreen(eventReceiver = viewModel)
+
             }
         }
     }

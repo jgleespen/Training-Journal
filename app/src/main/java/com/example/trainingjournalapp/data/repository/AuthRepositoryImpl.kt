@@ -98,7 +98,7 @@ constructor(private val auth: FirebaseAuth) : AuthRepository {
         return try {
             auth.signOut()
             Success(Unit)
-        } catch (e: java.lang.Exception) {
+        } catch (e: Exception) {
             when(e) {
                 is CancellationException -> throw e
                 else -> Error(exception = e)

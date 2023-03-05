@@ -5,6 +5,7 @@ import com.example.trainingjournalapp.util.Response
 
 interface AuthRepository {
     suspend fun getCurrentUser(): Response<User>
+
     suspend fun getCurrentUserUid(): Response<String>
 
     suspend fun registerUserWithUsername(
@@ -19,8 +20,12 @@ interface AuthRepository {
     ): Response<User>
 
     suspend fun logout(): Response<Unit>
+
     suspend fun sendPasswordResetEmail(email: String): Response<Unit>
+
     suspend fun updateEmail(newEmail: String, password: String): Response<Unit>
+
     suspend fun updatePassword(oldPassword: String, newPassword: String): Response<Unit>
+
     suspend fun updateUsername(username: String): Response<Unit>
 }

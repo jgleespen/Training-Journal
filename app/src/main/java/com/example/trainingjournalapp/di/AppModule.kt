@@ -1,7 +1,9 @@
 package com.example.trainingjournalapp.di
 
 import com.example.trainingjournalapp.data.repository.AuthRepositoryImpl
+import com.example.trainingjournalapp.data.repository.ExerciseRepositoryImpl
 import com.example.trainingjournalapp.domain.models.AuthRepository
+import com.example.trainingjournalapp.domain.models.ExerciseRepository
 import com.example.trainingjournalapp.util.UserUtils
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -20,6 +22,10 @@ object AppModule {
     @Provides
     fun provideAuth(): FirebaseAuth = FirebaseAuth.getInstance()
 
+    @Singleton
+    @Provides
+    fun provideExerciseRepository(): ExerciseRepository = ExerciseRepositoryImpl()
+
     @Provides
     fun provideAuthRepository(
         firebaseAuth: FirebaseAuth
@@ -27,6 +33,7 @@ object AppModule {
 
     @Provides
     fun provideUserUtils(): UserUtils = UserUtils()
+
 
     @Singleton
     @Provides
